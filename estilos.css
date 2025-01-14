@@ -1,0 +1,109 @@
+p{
+    /*tamaño letra*/ font-size: 24;
+    /*tipo letra*/ font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    /*color letra*/color:aqua;  
+    /*caja*/border-style: solid;
+    /*color lienas caja*/border-color: black;
+    /*pa q la caja siempre tenga la anchura y el tamaño*/ box-sizing: border-box;
+    /*lugar texto*/ text-align: right;
+    /*margen arriba y abajo, margen q dejo a la izq*/ margin: 100px; margin-left: 400px;
+    /*margen interno caja*/ padding-left: 10px ; padding-right: 10px; padding-top: 10px;
+    /*fondo de color*/background-color:cornflowerblue;
+    /*fondo imagen*/background-image: url();
+    /*fondo ocupa*/background-size: 110%;
+    /*mueve el elemento hacia donde le digo y los pone en linea*/float: left;
+    /*grosor de la letra*/font-weight: 700px;
+    /*circulo*/border-radius: 10px;
+    /*quitar subraado de los enlaces*/text-decoration: none; 
+}
+    a visited { /*si lo has visitado que salga en azul*/
+        color:aqua;
+      }
+    /*raton encima, desaparece texto, mas grande ps font size...*/footer :hover{
+        display: none;
+    }
+    #Caja:hover{ /*pa cuando ponga el raton encima, /* dcha y abajo y difuminado -10 -10 izq arriba, pone sombrita*/
+        box-shadow: 50px 50px 50px blue; 
+    }
+      #rojo{ /*cambiar estilo contenedores pq les he llamado rojo con id*/
+        border-style: solid;
+        border-color: rgb(160, 25, 25);
+    }
+    #azul:hover #Caja2{ /*q aparezca una caja en caja azul con raton encima*/
+        display: block;
+    }
+    @font-face { /*pa poner una tipoo de letra mio en h1*/
+        font-family: FUENTEcopiada;
+        src: url(../APUNTES/Fuentes/Starward.ttf);
+    }
+    
+    h1{
+        font-family: FUENTEcopiada;
+    }
+
+    footer{
+        clear: both; /*pa q se ponga abajo el footer*/
+     }
+/* ANIMACIONES*/
+     @keyframes animacion2 {
+        0%{
+            width: 100px;
+            height: 100px;
+            border-style: solid;
+            border-color: black;
+            margin-left: 400px;
+            margin-top: 300px;
+        }
+        100%{
+            width: 100px;
+            height: 100px;
+            border-style: solid;
+            border-color: black;
+            margin-left: 400px;
+            margin-top: 300px;
+            border-radius: 100px; /*esquinas redondas*/
+            background-image: -webkit-radial-gradient(blue,white,blue); /*COLOR GRADIENT*/
+        }
+    }
+    div{
+        animation: animacion2 5s ; /*nombre duracion*/
+        animation-fill-mode: forwards; /*que se quede como al final*/
+    }
+    h1{
+        animation: animacion1 10s infinite; /*nombre duracion infinite(bucle)*/
+        animation-delay: 3s; /*espera 3 segundos a ejecutarse la animacion*/
+        position: fixed; //*pa q se quede fijo una vez q termine*/
+    }
+
+    @keyframes animacion3 {
+        0%{
+            text-shadow: 10px 10px 10px green;
+            transform: rotate(45deg); /*VAA GIRANDO*/
+        }
+        25%{
+            text-shadow: 10px -10px 10px red;
+            transform: rotate(-45deg);
+        }
+        75%{
+            text-shadow: -10px 10px 10px yellow;
+            transform: rotate(45deg);
+        }
+        100%{
+            text-shadow: -10px -10px 10px blue;
+            transform: rotate(-45deg);
+        }
+    }
+    h2{
+        font-size: 50px;
+        animation: animacion3 5s infinite;
+    }
+    #contenedor{
+        width: 100%;
+        height: 200px;
+        border-style: solid;
+        border-color: black;
+        display: flex; /*caja al lado de la otra*/
+        flex: 1; /*adapta tamaño caja a tamaño pantalla*/
+        justify-content: center; /*lo que queda en blanco dentro de contenedor ponga las cajas en el centro */ /*space bteween para dejar hueco en medio, space around hueco caja hueco...*/
+    align-items: center; /*cajas en medio del contenedor de arriba abajo*/
+    }
